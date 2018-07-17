@@ -26,10 +26,10 @@ To start using the library you'll need to:
 #### Include the library in your page
 Include the script (at cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js) at the end of the body tag of your HTML document, ie:
 ```
-		...
-		<div>Some content</div>
- 		<script type="text/javascript" src="//cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js"></script>
-	</body>
+        ...
+        <div>Some content</div>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js"></script>
+    </body>
 </html>
 ```
 After inserting the script tag inside the HTML document, there's some options you can use to change the default behavior of the script, please see the next section for details about this.
@@ -60,20 +60,20 @@ List of available configuration directives:
 
 Example:
 ```
-		...
-		<div>Some content</div>
+        ...
+        <div>Some content</div>
         <script type="text/javascript">
-        	window.YD = {
-            	logging: true,
-            	creatives: {
-	                ydUrlParameter: 'yd',
-	                trackNavigation: true,
-	                clickClass: '.yd-click',
-	                openClass: '.yd-open'
-	            }
+            window.YD = {
+                logging: true,
+                creatives: {
+                    ydUrlParameter: 'yd',
+                    trackNavigation: true,
+                    clickClass: '.yd-click',
+                    openClass: '.yd-open'
+                }
             };
         </script>
- 		<script type="text/javascript" src="//cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js"></script>
     </body>
 </html>
 ```
