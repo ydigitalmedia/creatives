@@ -29,7 +29,7 @@ Include the script (at cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creative
 		...
 		<div>Some content</div>
  		<script type="text/javascript" src="//cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js"></script>
-    </body>
+	</body>
 </html>
 ```
 After inserting the script tag inside the HTML document, there's some options you can use to change the default behavior of the script, please see the next section for details about this.
@@ -203,7 +203,7 @@ YD.trackNavigation('click', 'Screen', 'Label', false);
 
 // example with a callback
 YD.trackNavigation('click', 'Screen', 'Label', false).then(function(event){
-	window.alert('Success!');
+    window.alert('Success!');
 });
 ```
 
@@ -233,7 +233,7 @@ YD.clickThrough('Screen', 'Label', '_blank', false, false);
 
 // example with a callback
 YD.clickThrough('Screen', 'Label', '_blank', false, false).then(function(event){
-	window.alert('Success!');
+    window.alert('Success!');
 });
 ```
 
