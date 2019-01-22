@@ -1,5 +1,4 @@
 
-
 [![License: CC BY-NC-ND 4.0](https://licensebuttons.net/l/by-nc-nd/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 
@@ -42,9 +41,20 @@ Almost every part of the lib can be configured. Bellow there's a list of all the
 ##### By declaring the YD variable
 List of available configuration directives:
 
+* **logging** (Boolean, false)
+	Console logging switch. In test hosts it defaults to true.
+
+
+* **testHosts** (Array, ['localhost', '10.0.0.169'])
+	Array with a list of the test hosts.
+
 
 * **creatives.ydUrlParameter** (string, 'yd')
 	Expected YD URL parameter name on input
+
+
+* **creatives.impressionIdParam** (string, 'ntw_impression_id')
+	Expected impression URL parameter name on input
 
 
 * **creatives.trackNavigation** (boolean, true)
@@ -58,6 +68,10 @@ List of available configuration directives:
 * **creatives.openClass** (string, '.yd-open')
 	The CSS class name responsible for the click through tracking
 
+
+* **creatives.networkClickUrlParam** (string, 'ntw_click_url')
+	Expected network click URL parameter name on input
+
 Example:
 ```
         ...
@@ -67,9 +81,11 @@ Example:
                 logging: true,
                 creatives: {
                     ydUrlParameter: 'yd',
+                    impressionIdParam: 'ntw_impression_id',
                     trackNavigation: true,
                     clickClass: '.yd-click',
-                    openClass: '.yd-open'
+                    openClass: '.yd-open',
+                    networkClickUrlParam: 'ntw_click_url'
                 }
             };
         </script>
@@ -83,9 +99,16 @@ Example:
 ##### By passing parameters in the URL
 List of available configuration directives:
 
+* **logging** (boolean, false)
+	Console logging switch. In test hosts it defaults to true.
+
 
 * **ydParam** (string, 'yd')
 	Expected YD URL parameter name on input
+
+
+* **impParam** (string, 'ntw_impression_id')
+	Expected impression URL parameter name on input
 
 
 * **clickClass** (string, '.yd-click')
@@ -101,7 +124,7 @@ List of available configuration directives:
 
 Example:
 ```
-<script type="text/javascript" src="//cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js?ydParam=yd"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js?logging=1"></script>
 ```
 You can also pass any of this configuration parameters in the top link of the page.
 
