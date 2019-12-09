@@ -23,11 +23,11 @@ To start using the library you'll need to:
 
 
 #### Include the library in your page
-Include the script (at cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js) at the end of the body tag of your HTML document, ie:
+Include the script (at pkg.ydigitalmedia.com/creatives@4/yd-creatives.js) at the end of the body tag of your HTML document, ie:
 ```
         ...
         <div>Some content</div>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js"></script>
+        <script type="text/javascript" src="//pkg.ydigitalmedia.com/creatives@4/yd-creatives.js"></script>
     </body>
 </html>
 ```
@@ -89,7 +89,7 @@ Example:
                 }
             };
         </script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js"></script>
+        <script type="text/javascript" src="//pkg.ydigitalmedia.com/creatives@4/yd-creatives.js"></script>
     </body>
 </html>
 ```
@@ -124,7 +124,7 @@ List of available configuration directives:
 
 Example:
 ```
-<script type="text/javascript" src="//cdn.jsdelivr.net/gh/ydigitalmedia/creatives@4/yd-creatives.js?logging=1"></script>
+<script type="text/javascript" src="//pkg.ydigitalmedia.com/creatives@4/yd-creatives.js?logging=1"></script>
 ```
 You can also pass any of this configuration parameters in the top link of the page.
 
