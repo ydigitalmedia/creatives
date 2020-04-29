@@ -234,7 +234,7 @@ YD.trackNavigation('click', 'Screen', 'Label', false).then(function(event){
 
 ##### Track clicks (and go to the LP)
 ```
-YD.clickThrough(screen = 'home', btnLabel, target = '_blank', preventDefault = false, useDOM = false)
+YD.clickThrough(screen = 'home', btnLabel, target = '_blank', preventDefault = false, useDOM = false, newClickUrl = null)
 ```
 ###### Parameters
 * **screen**          - Optional, the name of the screen the user are in. The default is *home*
@@ -242,6 +242,7 @@ YD.clickThrough(screen = 'home', btnLabel, target = '_blank', preventDefault = f
 * **target**          - Optional, by default the LP will always be opened in a new window, but you can change this behavior by giving another target. You can give any target you want, but there's some reserved tokens that have special meanings. ***_self*** will open the LP in the current window or frame, ***_blank*** will always open the LP in a new window and ***_none*** will not open the LP at all, but will silently register the click, this is useful when the campaign has no LP.
 * **preventDefault**  - Optional, by default this parameter is *true*, which means that the event default action will be canceled, without stopping further propagation of the event. See this for more details: https://developer.mozilla.org/en/docs/Web/API/Event/preventDefault
 * **useDOM**          - Optional, this parameter is *false* by default and in case it's true, a real HTML image tag will be written to the document, otherwise (the default) the Image object will be used to make the server call.
+* **newClickUrl**     - Optional, used to overwrite the click tracker click through URL. The default is *null* and only accepts a *valid URL*, otherwise it will be ignored.
 
 ###### Returns
 Returns a Promise object. Read more about promises in here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
@@ -252,10 +253,10 @@ Returns a Promise object. Read more about promises in here: https://developer.mo
 YD.clickThrough(null, 'Label');
 
 // Complete example
-YD.clickThrough('Screen', 'Label', '_blank', false, false);
+YD.clickThrough('Screen', 'Label', '_blank', false, false, 'https://lpexample.com');
 
 // example with a callback
-YD.clickThrough('Screen', 'Label', '_blank', false, false).then(function(event){
+YD.clickThrough('Screen', 'Label', '_blank', false, false, null).then(function(event){
     window.alert('Success!');
 });
 ```
